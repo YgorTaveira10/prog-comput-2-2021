@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title> Exemplo 2</title>
+        <meta charset="utf-8"/> <!-- sistema de codificação aceita ç á à ã -->
+        <!-- meta é a auto-explicação de si mesmo -->
+        <style>
+            /* CSS */
+            /* regra se aplica apenas ao elemento ul dentro do menu */
+            #caixa {
+                background-color: rgb(253, 64, 7);
+                width: 500px;
+                border:  30px solid rgb(250, 246, 1);
+                padding: 20px;
+                margin: 100px auto;
+                
+            }
+
+        </style>
+        <link rel="stylesheet" href="css/menu.css"> 
+    </head>
+    <body>
+        <nav id="menu">  <!-- menu de navegação -->
+            <ul> <!-- unorded list ou lista nao ordenada -->
+                <li> <a href="home.html"> Home </a> </li> <!-- list item ou item da lista -->
+                <li> <a href="imc.html"> Calculadora do IMC </a> </li>
+                <li> <a href="viagem.html"> Custo da viagem </a> </li>
+                <li> <a href="sobre.html"> Sobre </a> </li>
+                <li> <a href="galeria.html"> Galeria de imagens </a></li>
+                <li> <a href="videos.html"> Vídeos do YouTube </a></li>  
+                <li> <a href="tabela.html"> Tabela nutricional </a></li>  
+                <li>
+                    <div class="menu-suspenso">
+                         Calculadora do IMC 
+                    <div class="conteudo-menu-suspenso">
+                        <a href="imc-homem.html"> Homem </a>
+                        <a href="imc-mulher.html"> Mulher </a>
+                    </div>
+                    </div> 
+                </li>                 
+            </ul>
+        </nav>
+        <div id="caixa">
+            Um pouco sobre mim: meu nome é Ygor, tenho 19 anos de idade 
+            e estou cursando sistema de informaçao na Uni-Facef, este site
+            foi criado por mim no primeiro semestre do ano de 2021.
+
+        </div>
+    </body>
+</html>

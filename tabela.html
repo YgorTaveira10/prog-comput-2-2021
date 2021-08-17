@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title> Exemplo 2</title>
+        <meta charset="utf-8"/> <!-- sistema de codificação aceita ç á à ã -->
+        <!-- meta é a auto-explicação de si mesmo -->
+        <style>
+
+            #conteudo {
+                width: 800px;
+                margin: 50px auto;
+            }
+            #tabela {
+                font-family: Arial, Helvetica, sans-serif; /* tipo da fonte */
+                width: 100%; /* ocupa 100% dos 800px*/
+                border-collapse: collapse; /* retira os espaços das celulas*/
+            }
+            td, th {
+                border: 1px solid #ddd;
+                padding: 10px; /* espaçamento interno da celula*/
+                
+            }
+            th {
+                background-color: green; /* cabeçalho com o fundo verde*/
+                color: white; /* cabeçalho com texto branco*/
+            }
+            tr:hover { /* quando passar o mouse em cima da linha */
+                background-color: yellow;
+
+            }
+            .menu-suspenso {
+                position: relative; /* o conteudo atual acompanha o conteudo da página*/
+                display: inline-block; /*mostra o conteudo em uma unica linha */
+
+            }
+            .conteudo-menu-suspenso {
+                display: none; 
+                position: absolute; /* conteudo atual não acompanha conteudo da página*/
+                background-color: cyan;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,2);
+            }
+            .menu-suspenso:hover .conteudo-menu-suspenso { /* quando passar o mouse */
+                display: block; /*coloca para mostra */
+
+            }
+            .conteudo-menu-suspenso a {
+                display: block; /* faz aparecer cada link em uma linha */
+                padding: 8px;
+                text-decoration: none; /* link nao ficar sublinhado*/
+            }
+
+        </style>
+        <link rel="stylesheet" href="css/menu.css"> 
+    </head>
+    <body>
+        <nav id="menu">  <!-- menu de navegação -->
+            <ul> <!-- unorded list ou lista nao ordenada -->
+                <li> <a href="home.html"> Home </a> </li> <!-- list item ou item da lista -->
+                <li> <a href="imc.html"> Calculadora do IMC</a> </li>
+                <li> <a href="viagem.html"> Custo da viagem </a> </li>
+                <li> <a href="sobre.html"> Sobre </a> </li>
+                <li> <a href="galeria.html"> Galeria de imagens </a></li>
+                <li> <a href="videos.html"> Vídeos do YouTube </a></li>  
+                <li> <a href="tabela.html"> Tabela nutricional </a></li> 
+                <li>
+                    <div class="menu-suspenso">
+                         Calculadora do IMC 
+                    <div class="conteudo-menu-suspenso">
+                        <a href="imc-homem.html"> Homem </a>
+                        <a href="imc-mulher.html"> Mulher </a>
+                    </div>
+                    </div> 
+                </li>                
+            </ul>
+        </nav>
+        <div id="conteudo">
+            <table id="tabela"> <!-- criamos uma tabela -->
+                <tr> <!-- cria uma linha -->
+                    <th> <!-- cabeçalho -->
+                        Nome do jogo 
+                    </th>
+                    <th>
+                        Site do jogo
+                    </th>
+                    <th>
+                        Tipo do jogo
+                    </th>
+                </tr>
+                <tr> <!-- cria linha -->
+                    <td> <!-- cria uma célula -->
+                        GTA
+                    </td>
+                    <td>
+                        <a href="https://www.epicgames.com/store/pt-BR/p/grand-theft-auto-v">
+                         GTA
+                        </a>
+                    </td>
+                    <td>
+                        Jogo maldoso
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Fortnite
+                    </td>
+                    <td>
+                        <a href="https://www.epicgames.com/fortnite/pt-BR/home">
+                        Fortnite
+                        </a>
+                    </td>
+                    <td>
+                        Battle Royale
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Rocket league
+                    </td>
+                    <td>
+                        <a href="https://www.rocketleague.com/pt-br/">
+                        Rocket League
+                        </a>
+                    </td>
+                    <td>
+                        Futebol de carro
+                    </td>
+
+                </tr>
+            </table>
+        </div>
+
+    </body>
+</html>

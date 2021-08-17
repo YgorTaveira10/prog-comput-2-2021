@@ -1,0 +1,41 @@
+            /* regra se aplica apenas ao elemento ul dentro do menu */
+            #menu ul{
+                padding: 10px; /* espaçamento interno de 0px */
+                width: 1400px; /* largura da lista do menu*/
+                margin: 10px auto; /* espaçamento externo de 0px da lista */
+                background-color: green; /* cor de fundo da lista*/
+                list-style: none; /* lista não tera bolinhas - os itens */
+            } 
+            /* a regra se aplica aos itens da lista do menu */
+            #menu ul li {
+                display: inline; /* os itens da lista ficarão em uma unica linha */
+                padding: 30px; /* espaçamento interno entre os itens */
+            }
+            /* a regra se aplica aos itens da lista do menu */
+            #menu ul li a {
+                background-color: green; /* cor de fundo */
+                color: rgb(8, 8, 8); /*cor de texto*/
+                text-decoration: none; /*sem sublinhado*/
+                border-bottom: 3px solid #0a0a0a; /* uma borda em baixo do texto*/
+            }
+            .menu-suspenso {
+                position: relative; /* o conteudo atual acompanha o conteudo da página*/
+                display: inline-block; /*mostra o conteudo em uma unica linha */
+
+            }
+            .conteudo-menu-suspenso {
+                display: none; 
+                position: absolute; /* conteudo atual não acompanha conteudo da página*/
+                background-color: cyan;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,2);
+            }
+            .menu-suspenso:hover .conteudo-menu-suspenso { /* quando passar o mouse */
+                display: block; /*coloca para mostra */
+
+            }
+            .conteudo-menu-suspenso a {
+                display: block; /* faz aparecer cada link em uma linha */
+                padding: 8px;
+                text-decoration: none; /* link nao ficar sublinhado*/
+            }

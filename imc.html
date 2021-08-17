@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title> Exemplo 2</title>
+        <meta charset="utf-8"/> <!-- sistema de codificação aceita ç á à ã -->
+        <!-- meta é a auto-explicação de si mesmo -->
+        <style>
+    
+        </style>
+        <!-- referenciar um CSS externo-->
+        <link rel="stylesheet" href="css/menu.css">  
+        <link rel="stylesheet" href="css/imc.css">
+        <!-- referenciar um JavaScript externo -->      
+        <script type="text/javascript" src="js/imc.js"></script>
+    </head>
+    <body>
+        <nav id="menu">  <!-- menu de navegação -->
+            <ul> <!-- unorded list ou lista nao ordenada -->
+                <!-- a significa ancora (link)-->
+                <li> <a href="home.html"> Home </a> </li> <!-- list item ou item da lista -->
+                <li> <a href="imc.html"> Calculadora do IMC </a> </li>
+                <li> <a href="viagem.html"> Custo da viagem </a> </li>
+                <li> <a href="sobre.html"> Sobre </a> </li>
+                <li> <a href="galeria.html"> Galeria de imagens </a></li>
+                <li> <a href="videos.html"> Vídeos do YouTube </a></li>
+                <li> <a href="tabela.html"> Tabela nutricional </a></li> 
+                <li>
+                    <div class="menu-suspenso">
+                         Calculadora do IMC 
+                    <div class="conteudo-menu-suspenso">
+                        <a href="imc-homem.html"> Homem </a>
+                        <a href="imc-mulher.html"> Mulher </a>
+                    </div>
+                    </div> 
+                </li>    
+            </ul>
+
+        </nav>
+        <div id="formulario">
+            <h2> Calculadora de IMC - Indice de Massa Corpórea </h2>
+            <div id="divPeso"> <!-- container -->
+                <label for="peso"> Peso </label> <!-- rótulo -->
+                <input type="number" id="peso"/> <!-- caixa de entrada de dados -->
+           </div>
+            <div id="divAltura">
+               <label for="altura"> Altura </label>
+               <input type="number" id="altura"/>
+           </div>
+           <div id="botão">
+                <button onClick="organizar()" type="button"> Calcula </button>
+           </div>
+        </div>
+    </body>
+</html>

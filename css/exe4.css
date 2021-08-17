@@ -1,0 +1,10 @@
+#formulario {
+    border-radius: 12px;
+    margin: 20px auto;
+    background-color: rgb(168, 167, 167);
+    width: 400px;
+}
+.campos {
+    padding: 30px;
+    
+}

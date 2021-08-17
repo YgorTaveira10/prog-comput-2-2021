@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Ex. 24</title>
+        <meta charset="utf-8"/>
+        <script src="js/es24.js"> </script>
+    </head>
+    <body>
+        <div>
+            <div>
+                <label for="preco"> Preço </label>
+                <input type="number" id="preco"/>
+            </div>
+            <div>
+                <label for="cat"> Categoria </label>
+                <select id="cat">
+                    <option value ="1"> Limpeza </option>
+                    <option value="2"> Alimentação </option>
+                    <option value="3"> Vestuario </option>
+                </select>
+            </div>
+            <div>
+                <label> Precisa de Refrigeração </label>
+                <!-- mutuamente exclusivos, pois possuem o mesmo name -->
+                <input type="radio" name="situacao" id="R" checked /> Sim 
+                <input type="radio" name="situacao" id="N"/> Não 
+            </div>
+            <div>
+                <button type="button" onclick="calcular()"> Confirmar </button>
+            </div>
+            <div>
+                Resultados: </br>
+                Valor do Aumento: <h3 id="aumento"> </h3>
+                Valor Imposto: <h3 id="imposto"> </h3>
+                Novo Preço: <h3 id="novo"> </h3>
+                Classificação: <h3 id="classi"> </h3>
+            
+              </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8"/>
+        <title> PROVA EX-2 </title>
+        <script>
+            function mp() {
+                let quilometros = Number(document.getElementById("quilometros").value)
+                let perlitro = Number(document.getElementById("perlitro").value)
+                let valor = Number(document.getElementById("valor").value)
+
+                let total = (quilometros / perlitro ) * (valor)
+
+                document.getElementById("resultado").innerHTML = total.toFixed(2)
+
+                // E é representado por &&
+                // OU é representado por ||
+
+                if (gasto >= 100){
+                    alert("Viagem muito cara")
+                }
+                else if ((gasto < 100) && (gasto > 60)){
+                    alert("Viagem cara")
+                }
+                else if ((gasto< 60) && (gasto >= 30)){
+                    alert("Viagem barata")
+                }
+                else {
+                    alert("Viagem muito barata")
+                }
+            }
+        </script>
+        <style>
+            #formulario {
+            border-radius: 12px;
+            margin: 20px auto;
+            background-color: rgb(168, 167, 167);
+            width: 400px;
+         }
+            .campos {
+            padding: 30px;
+    
+         }
+
+        </style>
+    </head>
+    <body>
+        <div id="formulario">
+            <h2> EXCERCICIO 2 </h2>
+            <div class="campos">
+                <label for="quilometros"> KM percorridos </label>
+                <input type="number" id="quilometros">
+            </div>
+            <div class="campos">
+                <label for="perlitro"> Autonomia do carro </label>
+                <input type="number" id="perlitro">
+            </div>
+            <div class="campos">
+                <label for="valor"> Valor de 1 Litro </label>
+                <input type="number" id="valor">
+            </div>
+            <div>
+                <button type="button" onClick="mp()"> Valor gasto com combustivel </button>
+            </div>
+            <div>
+                <h3 id="resultado"> </h3>
+            </div>
+        </div>
+    </body>
+</html>

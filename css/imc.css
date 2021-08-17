@@ -1,0 +1,12 @@
+#formulario {
+    outline: blue 2px solid; 
+    padding: 30px;
+    width: 550px;
+    margin: 40px auto;
+}
+#divPeso, #divAltura, #botao {
+    margin: 10px;
+}
+h2 {
+    color: blue
+}
