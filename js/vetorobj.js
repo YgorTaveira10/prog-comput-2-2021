@@ -70,5 +70,48 @@ let gerenciaRedesSociais = () => {
 
     }
     //ex3 o usuario informa o login do usuario, e o programa retorna quantos posts ele fez
+    // solicita o usuario informar o login
+
+    let login = prompt(`Informe o login do usuario desejado`)
+    //procura o login no vetor de usuarios
+    let somaPosts = 0 
+    let achou = false // nao encontrei o usuario
+    for (let i =0; i<5; i++)
+    {
+        if (login == vetorUsuarios[i].login){// achei o usuario procurado
+              somaPosts = somaPosts + vetorUsuarios[i].qtdePosts
+              achou =  true // achou o usuario
+        }
+    }
+    if (achou){
+        alert(`O usuario com login ${login} realizou ${somaPosts}`)
+    }
+    else {
+        alert(`Usuario não encontrado`)
+    }
+
     //ex4 o programa retorna quantos posts foram feitos por cada usuario
+    let vetorusuariosPosts = []
+    for (let i=0; i<5; i++) //para cada usuario do vetor
+    {
+        let achou = false // nao achou
+        for(let j=0; j<vetorusuariosPosts.length; j++)
+        {
+            if (vetorUsuarios[i].login == vetorusuariosPosts.login)
+            {
+                //soma a qtde de posts do usuario
+                vetorusuariosPosts[j].qtde = vetorusuariosPosts[j].qtde + vetorUsuarios[i].qtdePosts
+                achou = true
+            }
+        }
+        //usuario ainda nao existe no vetor vetorusuarioPosts, entao vamos criar
+        if (!achou){
+            vetorusuariosPosts.push({
+                login: vetorUsuarios[i].login,
+                qtde: vetorUsuarios[i].qtdePosts
+
+            })
+        }
+    }
+    console.log(vetorusuariosPosts)
 }
