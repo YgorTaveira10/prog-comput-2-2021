@@ -4,7 +4,7 @@ let sistemaVendas = () => {
     let vetVendedores = []
     let vetVendas = []
     do {
-        opcao = Number(prompt(`Informe: \n1. Cadastrar vendedor \n2. Cadastrar venda \n3 Procura venda \n4. Sair`))
+        opcao = Number(prompt(`Informe: \n1. Cadastrar vendedor \n2. Cadastrar venda \n3 Procura venda \n4. Soma Venda/vendedor \n5. Sair`))
         switch(opcao){
             case 1: let objeto = {
                         codigo: Number(prompt(`Informe código`)),
@@ -62,10 +62,41 @@ let sistemaVendas = () => {
                     if (!achou3){
                         console.log(`Venda não encontrada para este funcionario neste mes`)
                     }
-            alert(`O programa será encerrado`) 
+                    break
+            case 4: let codigo4 = Number(prompt(`Informe o codigo do vendedor`))
+                    // percorre o vetor de vendas
+                    let soma = 0
+                    let achou4 = false
+                    for(let i=0; i<vetVendas.length; i++){
+                        if(vetVendas[i].codigo == codigo4){
+                            soma = soma + vetVendas[i].valor
+                            achou4 = true
+                        }
+                    }
+                    if (soma == 0){
+                        console.log(`Venda não encontrada para este funcionario, ou venda igual a 0`)
+                    }
+                    else {
+                        console.log(`O total de vendas do vendedor ${codigo} foi ${soma}`)
+                    }
+                    break
+            case 5: let mes5 = Number(prompt(`Informe o mes de interesse`))
+                    let maiorvalor = 0
+                    let vendedorMaisVendeu = 0
+                    for(let i=0; i<vetVendas.length; i++){
+                        if ( vetVendas[i].mes == mes5){
+                            if(vetVendas[i].valor > maiorvalor){
+                                maiorvalor = vetVendas[i].valor // atualiza seu valor
+                                vendedorMaisVendeu = vetVendas[i].codigo
+                            }
+                        }
+                    }
+                    console.log(`O vendedor que mais vendeu foi ${vendedorMaisVendeu} com ${maiorvalor}`)
+                    break                
+            case 6: alert(`O programa será encerrado`) 
                     break
             default: alert(`Opção inválida`)
         }
     }
-    while (opcao != 4)
+    while (opcao != 6)
 }
